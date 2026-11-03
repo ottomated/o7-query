@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createQuery } from '$lib/query.svelte.js';
+	import { createQuery } from '#lib/query.svelte.ts';
 
 	const number = createQuery(
 		async () => {

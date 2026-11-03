@@ -55,8 +55,8 @@ export function createQuery<TKey, TData, TError = Error>(
 	const ssr = getContext<((key: TKey) => TData | undefined) | undefined>(SSR);
 	let initial = ssr?.(get_value(options.key)!);
 
-	let data = $state.frozen<TData | undefined>(initial);
-	let error = $state.frozen<TError | undefined>(undefined);
+	let data = $state.raw<TData | undefined>(initial);
+	let error = $state.raw<TError | undefined>(undefined);
 	const status = $derived.by(() => {
 		if (data) return Status.Success;
 		if (error) return Status.Error;
