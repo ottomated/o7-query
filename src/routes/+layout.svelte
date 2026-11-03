@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SSRProvider } from '$lib/ssr.js';
+	import { SSRProvider } from '#lib/ssr.ts';
 	const { children, data } = $props();
 </script>
 

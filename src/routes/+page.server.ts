@@ -1,4 +1,4 @@
-import { ssrPreload } from '$lib/ssr.js';
+import { ssrPreload } from '#lib/ssr.ts';
 
 export const load = async (event) => {
 	ssrPreload(3, 3.14159, event);
