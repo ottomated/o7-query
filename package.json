@@ -32,13 +32,15 @@
 		"lint": "prettier --check . && eslint .",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"size": "size-limit"
 	},
 	"dependencies": {
 		"object-code": "^2"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
+		"@size-limit/preset-small-lib": "^14.3.0",
 		"@sveltejs/adapter-auto": "^8.0.0",
 		"@sveltejs/kit": "^3.1.1",
 		"@sveltejs/package": "^3.0.2",
