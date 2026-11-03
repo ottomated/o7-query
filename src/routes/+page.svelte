@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createQuery, Status } from '#lib';
+	import { createQuery } from '#lib';
 	import Random from './Random.svelte';
 
 	let enabled = $state(true);

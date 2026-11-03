@@ -11,22 +11,22 @@
 
 ```svelte
 <script>
-  import { createQuery } from '@o7/query';
+	import { createQuery } from '@o7/query';
 
-  const catImage = createQuery(
-    async () => {
-      const res = await fetch('/api/random-cat');
-      return await res.text();
-    },
-    { key: 'random-cat' }
-  );
+	const catImage = createQuery(
+		async () => {
+			const res = await fetch('/api/random-cat');
+			return await res.text();
+		},
+		{ key: 'random-cat' }
+	);
 </script>
 
 {#if catImage.isLoading}
-  Loading...
+	Loading...
 {:else if catImage.isError}
-  Error: {catImage.error}
+	Error: {catImage.error}
 {:else if catImage.isSuccess}
-  <img src={catImage.data} alt="Cat" />
+	<img src={catImage.data} alt="Cat" />
 {/if}
 ```
